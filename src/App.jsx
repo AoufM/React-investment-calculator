@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import Header from './components/Header.jsx';
 import UserInput from './components/UserInput.jsx';
-import Results from './components/REsults.jsx';
+import Result from './components/Result.jsx';
+
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -30,7 +31,7 @@ function App() {
       {!inputIsValid && (
         <p className="center">Please enter a duration greater than zero.</p>
       )}
-      {inputIsValid && <Results input={userInput} />}
+      {inputIsValid && <Result input={userInput} />}
     </>
   );
 }
